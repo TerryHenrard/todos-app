@@ -12,6 +12,10 @@ export class TodoAPI {
     return todos ? JSON.parse(todos) : [];
   }
 
+  getTodoById(id: number): TodoType | undefined {
+    return this.getAllTodos().find((todo) => todo.id === id);
+  }
+
   /**
    * Saves the todo items to the local storage.
    * @param todos - Array of Todo items to be saved
