@@ -26,7 +26,7 @@ const TodoCreator: React.FC = () => {
       <input
         placeholder={"Working out"}
         type={"text"}
-        className="focus:outline-0 flex-grow"
+        className="focus:outline-0 flex-grow text-lg"
         value={todoText}
         onChange={handleInputChange}
       />
