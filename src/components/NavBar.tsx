@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import checkLogo from "../assets/images/check.png";
 
 interface NavLinkProps {
   isActive: boolean;
@@ -18,7 +19,7 @@ export const NavBar: React.FC = () => {
         <li>
           <NavLink to={"/"}>
             <img
-              src="/src/assets/images/check.png"
+              src={checkLogo}
               alt="Logo of the website. The letter V with a blue background. Most known as the checkmark logo."
               className="size-10"
             />
