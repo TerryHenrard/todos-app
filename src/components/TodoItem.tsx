@@ -3,6 +3,8 @@ import type TodoType from "../types/TodoType";
 import { useDispatch } from "react-redux";
 import { deleteTodo, editTodo, toggleTodo } from "../features/todoSlice";
 import React from "react";
+import deleteIcon from "../assets/images/delete.png";
+import editIcon from "../assets/images/edit.png";
 
 export const TodoItem: React.FC<TodoType> = ({
   id,
@@ -44,7 +46,7 @@ export const TodoItem: React.FC<TodoType> = ({
       }
     >
       <img
-        src="/src/assets/images/delete.png"
+        src={deleteIcon}
         alt="Dots that indicates a draggable item"
         className="w-4"
         onClick={handleDeleteTodo}
@@ -63,7 +65,7 @@ export const TodoItem: React.FC<TodoType> = ({
         className="w-5 h-5 cursor-pointer accent-blue-500 hover:accent-blue-600"
       />
       <img
-        src="/src/assets/images/edit.png"
+        src={editIcon}
         alt="Edit logo"
         className="w-5 absolute left-full mx-5"
         onClick={toggleEditMode}
